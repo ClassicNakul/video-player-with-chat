@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Video Container -->
+    <div class="video-container">
+        <video id="video" controls autoplay>
+            <source id="source" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Resolution Selector -->
+        <div class="resolution-selector">
+            <label for="resolution">Select Resolution:</label>
+            <select id="resolution" onchange="changeResolution(this)">
+                <option value="480p">480p</option>
+                <option value="720p" selected>720p</option>
+                <option value="1080p">1080p</option>
+            </select>
+        </div>
+
+        <!-- Forward and Backward Buttons Positioned Inside the Video -->
+        <div class="video-controls">
+            <button class="control-button backward" onclick="skip(-5)"><</button>
+            <button class="control-button forward" onclick="skip(10)">></button>
+        </div>
+
+        <!-- File Input for Video -->
+        <div class="file-input-container">
+            <label for="file">Choose a video:</label>
+            <input type="file" id="file" accept="video/mp4" onchange="selectVideo(this)">
+        </div>
+    </div>
+
+    <!-- Chat Room -->
+    <div class="chat-room">
+        <div class="messages" id="messages"></div>
+
+        <div class="message-box">
+            <input type="text" id="username" placeholder="Enter your username">
+            <textarea id="message" placeholder="Enter your message"></textarea>
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* General Page Layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 980px;
+    height: 580px;
+    background-color: #000;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Forward and Backward Buttons */
+.video-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.control-button.backward {
+    margin-left: 10px;
+}
+
+.control-button.forward {
+    margin-right: 10px;
+}
+
+.control-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Chat Room */
+.chat-room {
+    width: 300px;
+    height: 680px;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+.message-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-box input, .message-box textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+}
+
+.message-box button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background-color: #555;
+}
+
+/* File Input Styling */
+.file-input-container {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.file-input-container input[type="file"] {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.file-input-container input[type="file"]::-webkit-file-upload-button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Resolution Selector */
+.resolution-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.resolution-selector select {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+}
+
